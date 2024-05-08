@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="caption">
+      <h4>Thông tinh sinh viên</h4>
+      <img src="assets/images/{{student.anh}}" width="100px" alt="">
+    </div>
+    <ul>
+      <li><span>Họ tên: </span>{{student.hoten}}</li>
+      <li><span>Ngày sinh: </span>{{student.ngaysinh}}</li>
+      <li><span>Giới tính: </span>{{student.gioitinh}}</li>
+      <li><span> Điểm Trung Bình: </span>{{student.diemTB}}</li>
+    </ul>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FIRST</th>
+        <th scope="col">LAST</th>
+        <th scope="col">YEAR</th>
+        <th scope="col">PASSED</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of inventor">
+        <td>{{item.id}}</td>
+        <td>{{item.first}}</td>
+        <td>{{item.last}}</td>
+        <td>{{item.last}}</td>
+        <td>{{item.passed}}</td>
+
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">IMAGE</th>
+        <th scope="col">PRODUT</th>
+        <th scope="col">CODE</th>
+        <th scope="col">AVAIABLE</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">5 Star Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of products">
+        <td><img src="{{item.imageUrl}}" width="50px" alt=""></td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productCode}}</td>
+        <td>{{item.releaseDate}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.starRating}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</body>
+
+</html>
